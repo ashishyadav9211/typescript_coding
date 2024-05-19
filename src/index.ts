@@ -50,4 +50,5 @@ function promptUser(): void {
       }
     });
 }
+console.log("calling prompt  ......");
 promptUser();
