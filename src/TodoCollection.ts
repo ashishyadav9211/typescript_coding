@@ -22,7 +22,9 @@ export class TodoCollection {
   }
 
   getTodoById(id: number): TodoItem {
-    return this.itemMap.get(this.nextId);
+    let element = this.itemMap.get(this.nextId);
+    if (element == undefined) return new TodoItem(0, "Unknown taks", false);
+    return element;
   }
   markComplete(complete: boolean) {
     this.itemMap.forEach((item) => (item.complete = complete));
